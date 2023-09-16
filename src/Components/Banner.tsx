@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 // images
-import Image from "../../public/assests/Logo.png";
+import Image from "next/image";
+import V_Avi from "../../public/assests/1548.svg";
 // Icons
 import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
 // Type animation
@@ -9,87 +11,91 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../utils/variants";
+import Link from "next/link";
 
 const Banner = () => {
   return (
     <section
       id="home"
-      className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
+      className="min-h-[80vh] lg:min-h-[78vh] flex items-center"
     >
       <div className="container mx-auto">
         <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
           {/* text */}
-          <div className="flex-1 text-center font-secondary lg:text-left">
+          <div className="flex-1 text-center font-secondary lg:text-left  space-y-4">
+            <h1 className="text-white text-[30px] font-bold leading-[0.8] lg:text-[50px]">
+              Hello, World! 👋
+            </h1>
             <motion.h1
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-white text-[30px] font-bold leading-[0.8] lg:text-[50px]"
             >
-              AVINASH <span>KUMAR</span>
+              I'm <span className="text-green-400">AVINASH KUMAR</span>
             </motion.h1>
             <motion.div
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-semibold uppercase leading-[1]"
+              className="mb-6 text-[30px] lg:text-[30px] font-semibold uppercase leading-[1] pt-4"
             >
-              <span className="mr-4 text-white">I am a</span>
+              <span className="mr-4 text-white-400">a passionate</span>
               <TypeAnimation
                 sequence={[
-                  "Frontend Developer",
+                  "Frontend",
                   2000,
-                  "Full Stack Developer",
+                  "React.Js",
+                  2000,
+                  "Next.Js",
+                  2000,
+                  "Javascript❤️",
+                  2000,
+                  "👨‍💻 Web",
                   2000,
                 ]}
                 speed={50}
-                className="text-accent"
+                className="text-cyan-200"
                 repeat={Infinity}
                 wrapper="span"
               />
+              <span className="mr-4 text-yellow-200">Developer</span>
             </motion.div>
             <motion.p
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto lg:mx-0 pt-6"
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
-              officia, sed delectus dolore necessitatibus at eum? Voluptas
-              aperiam nemo officia debitis ducimus neque itaque harum!
+              <ul
+                role="list"
+                className="marker:text-sky-200 list-disc pl-5 space-y-3 text-white"
+              >
+                <li>Frontend Wizardry🪄: Where Innovation Meets Design</li>
+                <li>Building Delightful UX 🤩 </li>
+                <li>Everything from concept to creation ✨</li>
+              </ul>
             </motion.p>
-            <motion.div
-              variants={fadeIn("up", 0.6)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
-            >
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
-              </a>
-            </motion.div>
             {/* socials */}
             <motion.div
               variants={fadeIn("up", 0.7)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
+              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0 pt-6"
             >
-              <a href="">
+              <Link href="">
                 <FaYoutube />
-              </a>
-              <a href="">
+              </Link>
+              <Link href="">
                 <FaGithub />
-              </a>
-              <a href="">
+              </Link>
+              <Link href="">
                 <FaDribbble />
-              </a>
+              </Link>
             </motion.div>
           </div>
           {/* Image */}
@@ -99,10 +105,7 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex flex-1 max-w-[320px] lg:mx-w-[482px]"
           >
-            <img
-              src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
-              alt=""
-            />
+            <Image src={V_Avi} alt="avinash_pic" width={500} height={2000} />
           </motion.div>
         </div>
       </div>

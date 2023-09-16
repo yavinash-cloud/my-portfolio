@@ -1,11 +1,9 @@
-"use client";
-import Banner from "@/Components/Banner";
-import Header from "@/Components/Header";
+import Banner from "@/components/Banner";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Header />
+    <main className="flex min-h-screen flex-col items-center justify-between  relative z-10 pb-28">
       <Banner />
     </main>
   );

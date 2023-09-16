@@ -1,11 +1,11 @@
-import Work from "@/components/Work";
+import Contact from "@/components/Contact";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <Work />
-    </div>
+    <>
+      <Contact />
+    </>
   );
 };
 

@@ -18,10 +18,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  background-image: url("../../public/assests/site-bg.jpg"); /* Adjust the path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: beige;
+}
+
+@layer base {
+  body {
+    @apply text-white text-xl;
+  }
 }
