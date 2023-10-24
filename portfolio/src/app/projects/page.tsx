@@ -1,7 +1,10 @@
+"use client";
 import Project from "@/components/Project";
 import Work from "@/components/Work";
 import React from "react";
-import "../../components/banner.css";
+import "../../components/animate.css";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/variants";
 
 const page = () => {
   const projectData = [
@@ -25,7 +28,7 @@ const page = () => {
       role: "Frontend Developer",
       technologies:
         "React.JS, Chakra UI,TypeScript,Electron.js, Google Map APIs,",
-      screenshots: ["/xos1.png", "/xos2.png", "/xos3.png"],
+      screenshots: ["/xos1.png", "/xos2.png"],
       demoLink: "https://www.xostrucks.com/",
       githubLink: "",
     },
@@ -117,9 +120,15 @@ const page = () => {
   return (
     <div className="relative z-10">
       <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-semibold mb-4 flex justify-center text-flicker-in-glow">
+        <motion.h1
+          className="text-4xl mb-4 flex justify-center text-flicker-in-glow text-Rubrik-Distressed"
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           My Projects
-        </h1>
+        </motion.h1>
         {projectData.map((data, index) => {
           return <Project key={index} {...data} />;
         })}

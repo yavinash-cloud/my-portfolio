@@ -19,8 +19,8 @@ export default function ImageSlider({ screenshots }: any) {
   }, [active, autorotate]);
 
   const heightFix = () => {
-    if (screenshotsRef.current && screenshotsRef.current.parentElement)
-      screenshotsRef.current.parentElement.style.height = `${screenshotsRef.current.clientHeight}px`;
+    if (screenshotsRef?.current && screenshotsRef?.current?.parentElement)
+      screenshotsRef.current.parentElement.style.height = `${screenshotsRef?.current?.clientHeight}px`;
   };
 
   useEffect(() => {
@@ -52,6 +52,7 @@ export default function ImageSlider({ screenshots }: any) {
                     width={800}
                     height={600}
                     alt={"ss image"}
+                    loading="lazy"
                   />
                 </Transition>
               )

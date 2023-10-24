@@ -2,6 +2,8 @@ import { mailOptions, transporter } from "./nodemailer";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
+// @ts-nocheck
+
 interface ContactMessage {
   name: string;
   email: string;

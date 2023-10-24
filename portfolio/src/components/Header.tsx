@@ -1,62 +1,179 @@
 "use client";
 import Link from "next/link";
-import React from "react";
-import { FaUser, FaBriefcase } from "react-icons/fa";
-import { HiMail } from "react-icons/hi";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import "./animate.css";
+import Logo from "@/utils/Logo";
+import { Nosifer } from "next/font/google";
+
+const nosifier = Nosifer({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  const pathname = usePathname();
+  const isActive = (path: string) => {
+    return pathname === path
+      ? "hover:scale-125 text-glow font-bold"
+      : "hover:text-gray-200 hover:scale-125";
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        // You can adjust the scroll threshold (100 in this case) as needed
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
+
   return (
-    <header className=" py-4 lg:py-8  z-20 sticky top-0">
+    <header
+      className={`  lg:py-8  z-20 sticky -top-0.5 transition-all ${
+        scrolling || isNavOpen
+          ? "bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 py-3 shadow-md"
+          : "bg-transparent py-4"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 ">
           <Link href="/">
-            <img
-              src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Monogram-AKY-Logo-Design-Graphics-3386280-1.jpg"
-              alt="logo"
-              className="w-12 lg:w-20"
-            />
+            <Logo />
           </Link>
         </div>
-        <nav className="hidden lg:flex space-x-10">
-          <Link
-            href="/"
-            className="text-white hover:text-gray-400 hover:scale-125"
-          >
+        <nav
+          className={`hidden lg:flex md:flex sm:flex space-x-6  ${nosifier.className} text-xs lg:text-sm`}
+        >
+          <Link href="/" className={`text-white  ${isActive("/")}`}>
             Home
           </Link>
-          <Link
-            href="/about"
-            className="text-white hover:text-gray-400 hover:scale-125"
-          >
+          <Link href="/about" className={`text-white  ${isActive("/about")}`}>
             About
           </Link>
-          <Link
-            href="/skills"
-            className="text-white hover:text-gray-400 hover:scale-125"
-          >
+          <Link href="/skills" className={`text-white  ${isActive("/skills")}`}>
             Skills
           </Link>
           <Link
             href="/projects"
-            className="text-white hover:text-gray-400 hover:scale-125"
+            className={`text-white  ${isActive("/projects")}`}
           >
             Projects
           </Link>
-          <Link
-            href="/resume"
-            className="text-white hover:text-gray-400 hover:scale-125"
-          >
+          <Link href="/resume" className={`text-white  ${isActive("/resume")}`}>
             Resume
           </Link>
           <Link
             href="/contact"
-            className="text-white hover:text-gray-400 hover:scale-125"
+            className={`text-white  ${isActive("/contact")}`}
           >
             Contact
           </Link>
         </nav>
-        <div className="lg:hidden">
-          {/* Add your responsive menu button here */}
+        <div className="lg:hidden md:hidden sm:hidden flex">
+          <button
+            className="flex flex-col h-10 w-10 mr-2 border-2 border-white rounded justify-center items-center group"
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <div
+              className={`${genericHamburgerLine} ${
+                isNavOpen
+                  ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
+                  : "opacity-50 group-hover:opacity-100"
+              }`}
+            />
+            <div
+              className={`${genericHamburgerLine} ${
+                isNavOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
+              }`}
+            />
+            <div
+              className={`${genericHamburgerLine} ${
+                isNavOpen
+                  ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
+                  : "opacity-50 group-hover:opacity-100"
+              }`}
+            />
+          </button>
+
+          <div
+            className={
+              isNavOpen
+                ? "absolute w-full h-screen mt-12 left-0 bg-[url('../../public/assests/jsbg2.webp')] bg-no-repeat bg-cover bg-center bg-fixed flex flex-col justify-evenly items-center"
+                : "hidden"
+            }
+          >
+            <ul
+              className={`flex flex-col items-center justify-between top-8  ${nosifier.className} font-bold text-2xl text-yellow-500`}
+            >
+              <Link
+                href="/"
+                className={`  ${isActive(
+                  "/"
+                )} border-b border-gray-400 my-6 -mt-8 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className={`  ${isActive(
+                  "/about"
+                )} border-b border-gray-400 my-6 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                About
+              </Link>
+              <Link
+                href="/skills"
+                className={`  ${isActive(
+                  "/skills"
+                )} border-b border-gray-400 my-6 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                Skills
+              </Link>
+              <Link
+                href="/projects"
+                className={`  ${isActive(
+                  "/projects"
+                )} border-b border-gray-400 my-6 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                Projects
+              </Link>
+              <Link
+                href="/resume"
+                className={`  ${isActive(
+                  "/resume"
+                )} border-b border-gray-400 my-6 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                Resume
+              </Link>
+              <Link
+                href="/contact"
+                className={`  ${isActive(
+                  "/contact"
+                )} border-b border-gray-400 my-6 uppercase`}
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                Contact
+              </Link>
+            </ul>
+          </div>
         </div>
       </div>
     </header>

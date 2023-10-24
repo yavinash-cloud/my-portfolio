@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { lazy } from "react";
 import ToastProvider from "@/components/ToastProvider";
+import Background from "@/components/Background";
 
 const ParticlesContainer = lazy(
   () => import("../components/ParticlesContainer")
@@ -26,13 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning>
+        <Background />
         <ToastProvider />
         <Header />
+
         {/* <Nav /> */}
         {children}
+        {/* <ParticlesContainer /> */}
+
+        <Footer />
       </body>
-      <ParticlesContainer />
-      <Footer />
     </html>
   );
 }

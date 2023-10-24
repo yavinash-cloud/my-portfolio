@@ -1,5 +1,5 @@
 import React from "react";
-import "./glow.css";
+import "./animate.css";
 import Link from "next/link";
 import Image from "next/image";
 import ImageSlider from "./ImageSlider";
@@ -16,11 +16,10 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = (props) => {
-  // console.log("pppp", props.screenshots);
   return (
-    <div className="glow flex flex-col items-center justify-center p-4 m-8">
+    <div className="glow flex flex-col items-center justify-center p-4 m-8 backdrop-blur-sm rounded-3xl">
       <h2 className="text-xl font-bold underline">{props?.title}</h2>
-      <div className="bg-none p-8 shadow-sm rounded-lg flex">
+      <div className="bg-none p-8 shadow-sm rounded-lg flex-none lg:flex md:flex text-sm lg:text-base md:text-base">
         {props.index % 2 != 0 ? (
           <>
             <LeftContainer {...props} />
@@ -49,8 +48,8 @@ const LeftContainer: React.FC<ProjectProps> = ({
   githubLink,
 }) => {
   return (
-    <div className="flex-1">
-      <p className="uppercase">{description}</p>
+    <div className="lg:w-1/2 md:w-full lg:mr-4 md:mr-0">
+      <p className="uppercase lg:text-base md:text-base">{description}</p>
 
       <div className="mt-4">
         <ul className="list-disc m-4 space-y-4">
@@ -82,20 +81,22 @@ const LeftContainer: React.FC<ProjectProps> = ({
 
 const RightContainer: React.FC<ProjectProps> = (props) => {
   return (
-    <div className=" flex-1 p-4">
-      <div className="carousel-container relative overflow-hidden w-full">
+    <div className=" lg:w-1/2 md:w-full lg:ml-4 md:ml-0 p-4">
+      <div className="carousel-container relative lg:overflow-hidden lg:w-full">
         <ImageSlider {...props} />
       </div>
-      <strong>Link to live demo:</strong>{" "}
-      <Link
-        href={props?.demoLink}
-        prefetch={true}
-        rel="noopener noreferrer"
-        target="_blank"
-        className="underline pl-4"
-      >
-        <span> Click Here </span>
-      </Link>
+      <div className="-mt-14">
+        <strong>Link to live demo:</strong>{" "}
+        <Link
+          href={props?.demoLink}
+          prefetch={true}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="underline pl-4"
+        >
+          <span> Click Here </span>
+        </Link>
+      </div>
     </div>
   );
 };

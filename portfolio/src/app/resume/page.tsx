@@ -4,7 +4,7 @@ import React from "react";
 import { RiDownloadLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/variants";
-import "../../components/banner.css";
+import "../../components/animate.css";
 
 const page = () => {
   const handleDownload = () => {
@@ -27,25 +27,34 @@ const page = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-3xl font-semibold text-center mb-6 lighting-text text-flicker-in-glow"
+          className="text-4xl text-center mb-6 lighting-text text-flicker-in-glow text-Rubrik-Distressed"
         >
-          Download My Resume
+          HIRE ME!
         </motion.h2>
-
+        <motion.h3
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          className="p-2 text-center text-2xl text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400"
+        >
+          “I think people hire me because I am good at what I love to do.”
+        </motion.h3>
         {/* Resume Preview */}
         <motion.div
           variants={fadeIn("right", 0.3)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="p-8"
+          className="p-8 text-center"
         >
           {/* Resume Content */}
-          <div className="mb-4">
+          <div className="lg:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             <p>
-              Unlock the door to a world of innovation and creativity. Download
-              my resume to discover how I can transform your digital projects
-              into masterpieces.
+              Unlock the door to a world of innovation and creativity. Explore
+              my resume to discover how I can contribute to your projects. Ready
+              to elevate your team? Hire me and let's create something
+              extraordinary together!
             </p>
           </div>
         </motion.div>

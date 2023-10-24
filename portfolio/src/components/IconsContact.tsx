@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaYoutube,
+  FaFacebook,
 } from "react-icons/fa";
 import { FaSquareThreads, FaMedium } from "react-icons/fa6";
 
@@ -19,9 +20,9 @@ const IconsContact = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.7 }}
-      className="flex flex-row space-x-4 pl-4"
+      className="flex flex-row lg:items-start lg:justify-start space-x-4 lg:pl-4 justify-center items-center mt-6"
     >
-      <IconContext.Provider value={{ className: "shared-class", size: "30" }}>
+      <IconContext.Provider value={{ className: "shared-class" }}>
         <Link
           prefetch={true}
           rel="noopener noreferrer"
@@ -77,6 +78,14 @@ const IconsContact = () => {
           href="https://medium.com/@aviembitel"
         >
           <FaMedium />
+        </Link>
+        <Link
+          prefetch={true}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.fb.com/"
+        >
+          <FaFacebook />
         </Link>
       </IconContext.Provider>
     </motion.div>

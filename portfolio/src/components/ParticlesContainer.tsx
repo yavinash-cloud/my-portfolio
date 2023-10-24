@@ -12,7 +12,7 @@ const ParticlesContainer = () => {
   };
 
   return (
-    <div id="particles-js" className="z--1">
+    <div id="particles-js" className="-z-1">
       <Particles
         id="tsparticles"
         init={particlesInit}

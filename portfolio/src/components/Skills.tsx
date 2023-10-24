@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import "./glow.css";
-import "./banner.css";
+import "./animate.css";
+import "./animate.css";
+import { fadeIn } from "@/utils/variants";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const frontendSkills = [
@@ -125,9 +128,15 @@ const Skills = () => {
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-4xl font-bold mb-8 flex justify-center text-flicker-in-glow">
+      <motion.h1
+        className="text-4xl mb-8 flex justify-center text-flicker-in-glow text-Rubrik-Distressed"
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+      >
         MY SKILLS
-      </h1>
+      </motion.h1>
       <div className="mb-6">
         <h2 className="text-2xl font-semibold mb-6 flex justify-center underline">
           Frontend
@@ -144,7 +153,10 @@ const Skills = () => {
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={300}
-                className="glow hover:scale-110 transition duration-500 cursor-pointer object-cover"
+                loading="lazy"
+                className={`glow hover:scale-110 transition duration-500 cursor-pointer object-cover ${
+                  skill?.title === "Next.js" ? "bg-slate-500" : ""
+                }`}
               />
               <p className="pt-2">{skill?.title}</p>
             </div>
@@ -168,6 +180,7 @@ const Skills = () => {
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={300}
+                loading="lazy"
                 className="glow hover:scale-110 transition duration-500 cursor-pointer object-cover"
               />
               {/* <div className="w-24 h-8 bg-blue-500  mb-2"></div> */}
@@ -193,6 +206,7 @@ const Skills = () => {
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={300}
+                loading="lazy"
                 className="glow hover:scale-110 transition duration-500 cursor-pointer object-cover"
               />
               {/* <div className="w-24 h-8 bg-blue-500  mb-2"></div> */}

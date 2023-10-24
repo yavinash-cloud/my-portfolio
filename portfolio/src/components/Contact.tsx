@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { sendContactForm } from "../utils/SendContactForm";
@@ -22,7 +22,6 @@ const Contact = () => {
   };
 
   const handleChange = (e: any) => {
-    console.log("eeee", e.target);
     setState((prev) => ({
       ...prev,
       values: {
@@ -99,43 +98,55 @@ const Contact = () => {
   return (
     <section id="contact" className=" lg:section relative z-10">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row -mt-2">
           {/* text */}
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 ml-8"
+            className="flex-1 lg:ml-8 m-3"
           >
             <div>
-              <h4 className="text-xl font-bold uppercase text-accent  mb-2 tracking-wide">
+              <h4 className="text-l lg:text-3xl  uppercase text-center mb-2 tracking-wide text-flicker-in-glow text-Rubrik-Distressed">
                 Let's Connect
               </h4>
-              <h2 className="text-[20px] lg:text-[20px] leading-none mb-4">
-                🚀 Ready for a New Adventure? Count me in!
-                <br /> Whether it's a challenging project or a creative
-                collaboration, I'm all ears.
-              </h2>
-              <Image
+              <div className="relative">
+                <h2 className="absolute text-xs sm:ml-14 lg:text-[20px] leading-none lg:mb-4 text-teal-400 text-center pt-3  uppercase font-bold">
+                  🚀 Ready for a New Adventure? Count me in!
+                  <br /> Whether it's a challenging project or a creative
+                  collaboration, I'm all ears.
+                </h2>
+                <video
+                  src="https://cdnl.iconscout.com/lottie/premium/thumb/creative-team-8704283-7038603.mp4"
+                  muted={true}
+                  autoPlay={true}
+                  loop={true}
+                  width="750px"
+                  className=" rounded-2xl"
+                />
+                <div className="absolute bottom-0 px-4 py-3 lg:pr-20">
+                  {/* <Image
                 src="https://cdni.iconscout.com/illustration/premium/thumb/developer-team-working-together-5683342-4734795.png?f=avif"
                 alt="work together"
                 width={700}
                 height={200}
                 className="-mt-6"
-              />
-              <h2 className="text-[20px] lg:text-[20px] leading-none mb-12">
-                Don't Feel Like Filling Out Forms?
-                <br /> No worries! You can shoot me an email at
-                <a
-                  href="mailto:your.email@gmail.com"
-                  className="text-accent hover:underline"
-                >
-                  📮aviuitee@gmail.com
-                </a>
-              </h2>
+              /> */}
+
+                  <motion.h4 className="text-xs lg:text-xl text-center  bg-clip-text  text-transparent bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 font-bold uppercase lg:overflow-hidden">
+                    If you wanna get in touch, talk to me about a project
+                    collaboration, or just say hi, fill up the awesome form.
+                    <span className="text-yellow-800 font-bold hidden lg:block">
+                      👉
+                    </span>
+                    <br />
+                    Let's turn ideas into reality and create something amazing
+                    together!
+                  </motion.h4>
+                </div>
+              </div>
             </div>
-            <IconsContact />
           </motion.div>
           {/* form */}
 
@@ -144,7 +155,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col mr-4 mt-10 items-start p-[12px] max-w-[420px]  "
+            className="flex-1 border rounded-2xl flex flex-col lg:mr-4 lg:mt-10 lg:items-start lg:p-4 lg:m-2 lg:max-w-[420px] uppercase m-8 text-center p-4"
           >
             <label>Full Name*</label>
             <input
@@ -181,7 +192,7 @@ const Contact = () => {
             />
             <label>Message*</label>
             <textarea
-              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 resize-none mb-10 text-black font-medium"
+              className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 resize-none mb-10 text-black font-medium"
               value={values?.message}
               name="message"
               rows={4}
@@ -199,6 +210,21 @@ const Contact = () => {
               </button>
             </div>
           </motion.div>
+        </div>
+        <div className="mt-4 lg:flex lg:flex-row-reverse p-2">
+          <div className="text-sm lg:text-md leading-none text-white p-1 pb-3 -mt-3 text-center">
+            Don't Feel Like Filling Out Forms? No worries!
+            <br /> You can shoot me an email at
+            <a
+              href="mailto:your.email@gmail.com"
+              className="text-accent hover:underline text-blue-600 text-md lg:text-xl pt-3"
+            >
+              📮aviuitee@gmail.com
+            </a>
+          </div>
+          <div className="lg:flex-1 flex items-center justify-center lg:items-start lg:justify-start lg:text-3xl lg:-mt-6">
+            <IconsContact />
+          </div>
         </div>
       </div>
     </section>
