@@ -30,7 +30,6 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  distDir: "build",
 };
 
 module.exports = nextConfig;
