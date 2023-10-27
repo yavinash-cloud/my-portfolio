@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./background.css";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
@@ -187,18 +187,25 @@ const icons = [
 ];
 
 const Background = () => {
-  const repeatedIcons = Array.from({ length: 16 }, (_, index) => (
-    <div
-      key={index}
-      className={`flex flex-nowrap  ${
-        index % 2 === 0 ? "slide-track " : "slide-track2 p-8"
-      }`}
-    >
-      {icons.map((Icon, iconIndex) => (
-        <Icon key={iconIndex} className="transparent text-2xl lg:text-4xl" />
-      ))}
-    </div>
-  ));
+  const repeatedIcons = useMemo(
+    () =>
+      Array.from({ length: 16 }, (_, index) => (
+        <div
+          key={index}
+          className={`flex flex-nowrap  ${
+            index % 2 === 0 ? "slide-track " : "slide-track2 p-8"
+          }`}
+        >
+          {icons.map((Icon, iconIndex) => (
+            <Icon
+              key={iconIndex}
+              className="transparent text-2xl lg:text-4xl"
+            />
+          ))}
+        </div>
+      )),
+    []
+  );
   return (
     <div className="h-screen w-screen  fixed  opacity-10 select-none cursor-default -skew-y-12 -top-32">
       {repeatedIcons}

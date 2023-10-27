@@ -123,10 +123,11 @@ const Banner = () => {
             ></img> */}
             <Image
               alt="Web developer working on laptop  3D Illustration"
-              loading="lazy"
+              // loading="lazy"
               src="https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-laptop-6343300-5242454.png?f=webp"
               width={1000}
               height={4000}
+              priority={true}
             ></Image>
             {/* <video>
               <source

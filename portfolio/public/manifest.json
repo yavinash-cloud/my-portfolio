@@ -1,0 +1,12 @@
+{
+  "name": "Avinash Kumar Yadav",
+  "short_name": "AKY",
+  "display": "standalone",
+  "orientation": "portrait",
+  "purpose": "any maskable",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "scope": "/",
+  "description": "AKY - Personal Portfolio"
+}
