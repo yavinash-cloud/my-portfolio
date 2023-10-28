@@ -122,8 +122,8 @@ const page = () => {
       <div className="container mx-auto py-8">
         <motion.h1
           className="text-4xl mb-4 flex justify-center text-flicker-in-glow text-Rubrik-Distressed"
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
+          variants={fadeIn("up", 0.1)}
+          initial="show"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
         >

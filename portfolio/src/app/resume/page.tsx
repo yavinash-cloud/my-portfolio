@@ -23,7 +23,7 @@ const page = () => {
     <section className=" py-12 relative z-10 uppercase">
       <div className="container mx-auto">
         <motion.h2
-          variants={fadeIn("left", 0.3)}
+          variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
@@ -36,7 +36,7 @@ const page = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="p-2 text-center text-2xl text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400"
+          className="p-2 text-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400"
         >
           “I think people hire me because I am good at what I love to do.”
         </motion.h3>
@@ -49,7 +49,7 @@ const page = () => {
           className="p-8 text-center"
         >
           {/* Resume Content */}
-          <div className="lg:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <div className="lg:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold">
             <p>
               Unlock the door to a world of innovation and creativity. Explore
               my resume to discover how I can contribute to your projects. Ready
@@ -61,7 +61,7 @@ const page = () => {
         {/* Download Button */}
         <motion.div
           variants={fadeIn("down", 0.3)}
-          initial="hidden"
+          initial="show"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
           className="text-center p-8 mb-4"
