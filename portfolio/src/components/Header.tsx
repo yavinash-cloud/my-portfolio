@@ -57,26 +57,40 @@ const Header = () => {
         <nav
           className={`hidden lg:flex md:flex sm:flex space-x-6  ${nosifier.className} text-xs lg:text-sm`}
         >
-          <Link href="/" className={`text-white  ${isActive("/")}`}>
+          <Link href="/" as={`/`} className={`text-white  ${isActive("/")}`}>
             Home
           </Link>
-          <Link href="/about" className={`text-white  ${isActive("/about")}`}>
+          <Link
+            href="/about"
+            as={`/about`}
+            className={`text-white  ${isActive("/about")}`}
+          >
             About
           </Link>
-          <Link href="/skills" className={`text-white  ${isActive("/skills")}`}>
+          <Link
+            href="/skills"
+            as={`/skills`}
+            className={`text-white  ${isActive("/skills")}`}
+          >
             Skills
           </Link>
           <Link
             href="/projects"
+            as={`/projects`}
             className={`text-white  ${isActive("/projects")}`}
           >
             Projects
           </Link>
-          <Link href="/resume" className={`text-white  ${isActive("/resume")}`}>
+          <Link
+            href="/resume"
+            as={`/resume`}
+            className={`text-white  ${isActive("/resume")}`}
+          >
             Resume
           </Link>
           <Link
             href="/contact"
+            as={`/contact`}
             className={`text-white  ${isActive("/contact")}`}
           >
             Contact

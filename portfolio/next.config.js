@@ -30,6 +30,11 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  publicRuntimeConfig: {
+    PWA: {
+      manifest: "/manifest.json",
+    },
+  },
 };
 
 const runtimeCaching = require("next-pwa/cache");
@@ -40,6 +45,11 @@ const withPWA = require("next-pwa")({
   register: true, // Register the PWA service worker
   skipWaiting: true, // Skip waiting for service worker activation
   runtimeCaching,
+  sw: "service-worker.js",
+  fallbacks: {
+    image: "/offline.webp",
+    document: "/offline",
+  },
 });
 
 module.exports = withPWA(nextConfig);
