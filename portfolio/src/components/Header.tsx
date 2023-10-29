@@ -42,9 +42,9 @@ const Header = () => {
 
   return (
     <header
-      className={`  lg:py-8  z-20 sticky -top-0.5 transition-all ${
+      className={`  lg:py-5  z-20 sticky -top-0.5 transition-all ${
         scrolling || isNavOpen
-          ? "bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 py-3 shadow-md"
+          ? "bg-gradient-to-r from-gray-700 via-gray-900 to-black py-3 shadow-md "
           : "bg-transparent py-4"
       }`}
     >
@@ -125,12 +125,12 @@ const Header = () => {
           <div
             className={
               isNavOpen
-                ? "absolute w-full h-screen mt-12 left-0 bg-[url('../../public/assests/jsbg2.webp')] bg-no-repeat bg-cover bg-center bg-fixed flex flex-col justify-evenly items-center"
+                ? "absolute w-full h-screen mt-12 left-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-gray-900 to-gray-600 flex flex-col justify-evenly items-center"
                 : "hidden"
             }
           >
             <ul
-              className={`flex flex-col items-center justify-between top-8  ${nosifier.className} font-bold text-2xl text-yellow-500`}
+              className={`flex flex-col items-center justify-between top-8 mt-2  ${nosifier.className} font-bold text-xl text-purple-500`}
             >
               <Link
                 href="/"

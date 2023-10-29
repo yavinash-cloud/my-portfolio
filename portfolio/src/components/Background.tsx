@@ -69,7 +69,6 @@ import {
   SiWebpack,
 } from "react-icons/si";
 
-import useDarkMode, { DarkModeHookResult } from "./../utils/useDarkMode";
 const icons = [
   SiJavascript,
   SiGithubsponsors,

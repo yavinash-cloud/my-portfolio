@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "nextjsapprouting",
     "nextjsAppRouter",
   ],
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+  // themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#000" }],
   authors: [
     { name: "Avinash Kumar Yadav" },
     {

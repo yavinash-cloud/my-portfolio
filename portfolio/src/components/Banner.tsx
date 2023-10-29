@@ -15,7 +15,6 @@ import { fadeIn } from "../utils/variants";
 import WavingHand from "./Waving";
 import IconsContact from "./IconsContact";
 import "./animate.css";
-import ThemeToggle from "./ThemeToggle";
 import Skeleton from "./Skeleton";
 
 const Banner = () => {

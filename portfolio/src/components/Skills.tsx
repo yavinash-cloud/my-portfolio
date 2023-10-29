@@ -152,7 +152,7 @@ const Skills = () => {
                 src={skill?.icon}
                 alt={`${skill.title} Logo`}
                 width={150}
-                height={300}
+                height={150}
                 loading="lazy"
                 className={`glow hover:scale-110 transition duration-500 cursor-pointer object-cover ${
                   skill?.title === "Next.js" ? "bg-slate-500" : ""
