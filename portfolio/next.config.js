@@ -2,6 +2,9 @@
 const nextConfig = {
   swcMinify: true,
   images: {
+    domains: ["cdn3d.iconscout.com", "cdnlogo.com", "cdni.iconscout.com"],
+  },
+  images: {
     remotePatterns: [
       {
         protocol: "https",

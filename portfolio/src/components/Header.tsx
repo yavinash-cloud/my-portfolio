@@ -130,13 +130,13 @@ const Header = () => {
             }
           >
             <ul
-              className={`flex flex-col items-center justify-between top-8 mt-2  ${nosifier.className} font-bold text-xl text-purple-500`}
+              className={`flex flex-col items-center justify-between top-8 mt-2  ${nosifier.className} font-bold text-xl text-purple-500 -mt-56`}
             >
               <Link
                 href="/"
                 className={`  ${isActive(
                   "/"
-                )} border-b border-gray-400 my-6 -mt-8 uppercase`}
+                )} border-b border-gray-400 my-6 -mt-32 uppercase`}
                 onClick={() => setIsNavOpen((prev) => !prev)}
               >
                 Home

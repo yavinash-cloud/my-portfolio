@@ -27,7 +27,7 @@ const page = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-4xl text-center mb-6 lighting-text text-flicker-in-glow text-Rubrik-Distressed"
+          className="text-4xl text-center mb-6 lighting-text text-flicker-in-glow text-Rubrik-Distressed lg:m-12"
         >
           HIRE ME!
         </motion.h2>
