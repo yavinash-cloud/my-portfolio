@@ -56,10 +56,22 @@ const Skills = () => {
       title: "Browser Web APIs",
       icon: "/skill/browser_web_api.png",
     },
-    { title: "Responsive Layouts", icon: "/skill/Responsive_layouts.png" },
-    { title: "Wireframes", icon: "/skill/wireframes.png" },
-    { title: "Mockups", icon: "/skill/mockup.png" },
-    { title: "Web Security", icon: "/skill/websecurity.png" },
+    {
+      title: "Responsive Layouts",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/responsive-programming-9992432-8160685.png",
+    },
+    {
+      title: "Wireframes",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/wireframe-9638275-7831957.png",
+    },
+    {
+      title: "Mockups",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/web-search-5243641-4390223.png",
+    },
+    {
+      title: "Web Security",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/web-security-5617614-4674325.png",
+    },
     { title: "Electron.js", icon: "/skill/electronjs.png" },
     { title: "PWA", icon: "/skill/pwa.png" },
   ];
@@ -75,7 +87,10 @@ const Skills = () => {
     },
     { title: "Express.Js", icon: "/skill/express.png" },
     { title: "Microservices", icon: "/skill/microservices.png" },
-    { title: "REST API", icon: "/skill/restapi.png" },
+    {
+      title: "REST API",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/api-9662922-7825712.png",
+    },
     { title: "GraphQL API", icon: "/skill/graphql_logo.png" },
     {
       title: "Working Knowledge of Algorithms and Data Structures",
@@ -101,7 +116,10 @@ const Skills = () => {
       title: "GITHUB",
       icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-github-2950150-2447911.png",
     },
-    { title: "SEO & Performance Tuning", icon: "/skill/seo.png" },
+    {
+      title: "SEO & Performance Tuning",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/seo-page-quality-7890347-6323702.png",
+    },
 
     {
       title: "Docker",
