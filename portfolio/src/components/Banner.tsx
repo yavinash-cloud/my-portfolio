@@ -18,14 +18,6 @@ import "./animate.css";
 import Skeleton from "./Skeleton";
 
 const Banner = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
-
   return (
     <section
       id="home"
