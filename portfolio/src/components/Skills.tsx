@@ -149,7 +149,7 @@ const Skills = () => {
             >
               {" "}
               <Image
-                src={skill?.icon}
+                src={`${skill?.icon}`}
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={150}
@@ -176,10 +176,10 @@ const Skills = () => {
             >
               {" "}
               <Image
-                src={skill?.icon}
+                src={`${skill?.icon}`}
                 alt={`${skill.title} Logo`}
                 width={150}
-                height={300}
+                height={150}
                 loading="lazy"
                 className="glow hover:scale-110 transition duration-500 cursor-pointer object-cover"
               />
@@ -202,10 +202,10 @@ const Skills = () => {
               className=" p-4 rounded-lg flex flex-col items-center justify-center text-center"
             >
               <Image
-                src={skill?.icon}
+                src={`${skill?.icon}`}
                 alt={`${skill.title} Logo`}
                 width={150}
-                height={300}
+                height={150}
                 loading="lazy"
                 className="glow hover:scale-110 transition duration-500 cursor-pointer object-cover"
               />
