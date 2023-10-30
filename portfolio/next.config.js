@@ -11,6 +11,7 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+    disableStaticImages: true,
   },
   typescript: {
     // !! WARN !!
