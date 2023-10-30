@@ -25,7 +25,7 @@ const About = () => {
           >
             <img
               loading="lazy"
-              srcSet="https://cdn3d.iconscout.com/3d/premium/thumb/young-handsome-businessman-sitting-in-office-chair-with-hand-gesture-steeple-5138373-4300837.png?f=avif"
+              srcSet="https://cdn3d.iconscout.com/3d/premium/thumb/young-handsome-businessman-sitting-in-office-chair-with-hand-gesture-steeple-5138373-4300837.png"
               alt="Developer Image"
               className="lg:-mt-8"
             />

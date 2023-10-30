@@ -10,23 +10,23 @@ const Skills = () => {
   const frontendSkills = [
     {
       title: "HTML",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-html-9294875-7578018.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-html-9294875-7578018.png",
     },
     {
       title: "CSS",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-css-9294881-7578024.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-css-9294881-7578024.png",
     },
     {
       title: "JavaScript",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-javascript-9294848-7577991.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-javascript-9294848-7577991.png",
     },
     {
       title: "React",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-react-9294867-7578010.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-react-9294867-7578010.png",
     },
     {
       title: "TypeScript",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-9294849-7577992.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-9294849-7577992.png",
     },
     { title: "Redux", icon: "/skill/redux.1024x971.png" },
     {
@@ -36,7 +36,7 @@ const Skills = () => {
     },
     {
       title: "Tailwind CSS",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-tailwind-9294852-7577995.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-tailwind-9294852-7577995.png",
     },
     { title: "Webpack", icon: "/skill/webpack.png" },
     {
@@ -49,7 +49,7 @@ const Skills = () => {
     },
     {
       title: "Bootstrap",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-bootstrap-framework-logo-6563486-5453031.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-bootstrap-framework-logo-6563486-5453031.png",
     },
     { title: "SASS", icon: "https://sass-lang.com/assets/img/logos/logo.svg" },
     {
@@ -67,11 +67,11 @@ const Skills = () => {
   const backendSkills = [
     {
       title: "Node.js",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-9294859-7578002.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-9294859-7578002.png",
     },
     {
       title: "Nest.js",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-nestjs-9294862-7578005.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-nestjs-9294862-7578005.png",
     },
     { title: "Express.Js", icon: "/skill/express.png" },
     { title: "Microservices", icon: "/skill/microservices.png" },
@@ -87,29 +87,29 @@ const Skills = () => {
     { title: "Jest", icon: "/skill/jest.png" },
     {
       title: "AWS",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-amazon-web-services-8074662-6507782.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-amazon-web-services-8074662-6507782.png",
     },
     {
       title: "GIT",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-git-9294878-7578021.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-git-9294878-7578021.png",
     },
     {
       title: "GITLAB",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-gitlab-5562373-4642718.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-gitlab-5562373-4642718.png",
     },
     {
       title: "GITHUB",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-github-2950150-2447911.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-github-2950150-2447911.png",
     },
     { title: "SEO & Performance Tuning", icon: "/skill/seo.png" },
 
     {
       title: "Docker",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-docker-5645891-4695749.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-docker-5645891-4695749.png",
     },
     {
       title: "NPM",
-      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-npm-9294882-7578025.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-npm-9294882-7578025.png",
     },
     { title: "Accessibility", icon: "/skill/accessibility.png" },
     { title: "Elasticsearch", icon: "/skill/elastic.png" },
@@ -118,11 +118,11 @@ const Skills = () => {
     { title: "Filebeat", icon: "/skill/filebeat.png" },
     {
       title: "Frontend Mentor",
-      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/css-development-6849275-5618453.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/css-development-6849275-5618453.png",
     },
     {
       title: "Mock Interviewer",
-      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/application-development-6849283-5618449.png?f=avif",
+      icon: "https://cdn3d.iconscout.com/3d/premium/thumb/application-development-6849283-5618449.png",
     },
   ];
 
@@ -176,8 +176,7 @@ const Skills = () => {
             >
               {" "}
               <Image
-                // src={`${skill?.icon}`}
-                src="https://cdn3d.iconscout.com/3d/premium/thumb/application-development-6849283-5618449.png"
+                src={`${skill?.icon}`}
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={150}
