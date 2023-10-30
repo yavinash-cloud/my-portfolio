@@ -176,7 +176,8 @@ const Skills = () => {
             >
               {" "}
               <Image
-                src={`${skill?.icon}`}
+                // src={`${skill?.icon}`}
+                src="https://cdn3d.iconscout.com/3d/premium/thumb/application-development-6849283-5618449.png?f=avif"
                 alt={`${skill.title} Logo`}
                 width={150}
                 height={150}
