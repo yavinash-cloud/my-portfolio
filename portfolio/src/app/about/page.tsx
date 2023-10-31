@@ -16,7 +16,7 @@ const About = () => {
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center lg:gap-20">
           {/* img */}
-          <motion.div
+          {/* <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
@@ -29,7 +29,7 @@ const About = () => {
               alt="Developer Image"
               className="lg:-mt-8"
             />
-          </motion.div>
+          </motion.div> */}
           {/* text */}
           <motion.div
             variants={fadeIn("left", 0.3)}
