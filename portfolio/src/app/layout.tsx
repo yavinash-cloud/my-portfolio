@@ -3,9 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import { lazy } from "react";
+import { lazy, useMemo } from "react";
 import ToastProvider from "@/components/ToastProvider";
 import Background from "@/components/Background";
+import React from "react";
 
 // const ParticlesContainer = lazy(
 //   () => import("../components/ParticlesContainer")
@@ -44,18 +45,22 @@ export const metadata: Metadata = {
   ],
 };
 
+const MemoizedBackground = React.memo(Background);
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const backgroundComponent = useMemo(() => <MemoizedBackground />, []);
+
   return (
     <html lang="en">
       <body
         className={`${inter.className} min-h-screen flex flex-col`}
         suppressHydrationWarning
       >
-        <Background />
+        {backgroundComponent}
         <ToastProvider />
         <Header />
 

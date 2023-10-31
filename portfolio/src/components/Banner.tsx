@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 // images
 import Image from "next/image";
-import V_Avi from "../../public/assests/1548.svg";
 import "../components/animate.css";
 // Icons
 import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
@@ -15,7 +14,6 @@ import { fadeIn } from "../utils/variants";
 import WavingHand from "./Waving";
 import IconsContact from "./IconsContact";
 import "./animate.css";
-import Skeleton from "./Skeleton";
 
 const Banner = () => {
   return (
@@ -128,15 +126,6 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex sm:flex flex-1 max-w-[520px] lg:mx-w-[582px]"
           >
-            {/* <Image src={V_Avi} alt="avinash_pic" width={500} height={2000} /> */}
-            {/* <img
-              alt="Web developer working on project  3D Illustration"
-              loading="lazy"
-              width={1000}
-              height={4000}
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-project-6343303-5242452.png?f=webp"
-              srcSet="https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-project-6343303-5242452.png?f=webp 1x, https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-project-6343303-5242452.png?f=webp 2x"
-            ></img> */}
             <Image
               alt="Web developer working on laptop  3D Illustration"
               // loading="lazy"
@@ -145,17 +134,6 @@ const Banner = () => {
               height={4000}
               priority={true}
             ></Image>
-            {/* <video>
-              <source
-                // loading="lazy"
-                // muted="muted"
-                src="https://cdnl.iconscout.com/lottie/premium/thumb/java-developer-3574030-3099681.mp4"
-                type="video/mp4"
-                // autoplay="autoplay"
-                // loop="loop"
-                className="mtz-vlc-dkbcc mtz-mdkio"
-              ></source>
-            </video> */}
           </motion.div>
         </div>
       </div>
