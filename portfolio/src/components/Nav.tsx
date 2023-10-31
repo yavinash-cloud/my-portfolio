@@ -37,4 +37,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default React.memo(Nav);

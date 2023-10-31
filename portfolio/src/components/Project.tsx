@@ -36,7 +36,7 @@ const Project: React.FC<ProjectProps> = (props) => {
   );
 };
 
-export default Project;
+export default React.memo(Project);
 
 const LeftContainer: React.FC<ProjectProps> = ({
   title,

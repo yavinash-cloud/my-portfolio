@@ -1,12 +1,13 @@
 "use client";
 import Skills from "@/components/Skills";
-import React, { useMemo } from "react";
-
-const MemoizedSkills = React.memo(Skills);
+import React from "react";
 
 const page = () => {
-  const SkillsComponent = useMemo(() => <MemoizedSkills />, []);
-  return <div className="relative z-10">{SkillsComponent}</div>;
+  return (
+    <div className="relative z-10">
+      <Skills />
+    </div>
+  );
 };
 
 export default page;

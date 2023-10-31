@@ -92,4 +92,4 @@ const IconsContact = () => {
   );
 };
 
-export default IconsContact;
+export default React.memo(IconsContact);
