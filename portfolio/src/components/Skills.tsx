@@ -16,9 +16,9 @@ const Skills = () => {
     <div className="container mx-auto py-8">
       <motion.h1
         className="text-4xl mb-8 flex justify-center text-flicker-in-glow text-Rubrik-Distressed"
-        variants={fadeIn("down", 0.4)}
-        initial="hidden"
-        whileInView={"show"}
+        // variants={fadeIn("down", 0.4)}
+        // initial="hidden"
+        // whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
       >
         MY SKILLS
