@@ -95,112 +95,79 @@ const Contact = () => {
     }
   };
 
+  const Label = ({ htmlFor, children }) => (
+    <label
+      htmlFor={htmlFor}
+      className="block text-sm font-semibold mb-1 mt-2 text-left"
+    >
+      {children} <span className="text-red-500">*</span>
+    </label>
+  );
+
   return (
     <section id="contact" className=" lg:section relative z-10">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row -mt-2">
-          {/* text */}
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 lg:ml-8 m-3"
-          >
-            <div>
-              <h4 className="text-l lg:text-3xl  uppercase text-center mb-2 tracking-wide text-flicker-in-glow text-Rubrik-Distressed">
-                Let's Connect
-              </h4>
-              <div className="relative">
-                <h2 className="absolute text-xs sm:ml-14 lg:text-[20px] leading-none lg:mb-4 text-teal-400 text-center pt-3  uppercase font-bold">
-                  🚀 Ready for a New Adventure? Count me in!
-                  <br /> Whether it's a challenging project or a creative
-                  collaboration, I'm all ears.
-                </h2>
-                <video
-                  src="https://cdnl.iconscout.com/lottie/premium/thumb/creative-team-8704283-7038603.mp4"
-                  muted={true}
-                  autoPlay={true}
-                  loop={true}
-                  width="750px"
-                  className=" rounded-2xl"
-                />
-                <div className="absolute bottom-0 px-4 py-3 lg:pr-20">
-                  {/* <Image
-                src="https://cdni.iconscout.com/illustration/premium/thumb/developer-team-working-together-5683342-4734795.png?f=avif"
-                alt="work together"
-                width={700}
-                height={200}
-                className="-mt-6"
-              /> */}
-
-                  <motion.h4 className="text-xs lg:text-xl text-center  bg-clip-text  text-transparent bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 font-bold uppercase lg:overflow-hidden">
-                    If you wanna get in touch, talk to me about a project
-                    collaboration, or just say hi, fill up the awesome form.
-                    <span className="text-yellow-800 font-bold hidden lg:block">
-                      👉
-                    </span>
-                    <br />
-                    Let's turn ideas into reality and create something amazing
-                    together!
-                  </motion.h4>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-          {/* form */}
-
+      <div className="container mx-auto px-4">
+        <h4 className="text-3xl lg:text-4xl text-center text-flicker-in-glow text-Rubrik-Distressed mt-4">
+          Let's Connect
+        </h4>
+        {/* form */}
+        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-20">
           <motion.div
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col lg:mr-4 lg:mt-10 lg:items-start lg:p-4 lg:m-2 lg:max-w-[420px] uppercase m-8 text-center p-4"
+            className="w-full lg:w-1/2 border rounded-2xl flex flex-col uppercase text-center p-8 mt-2"
           >
-            <label>Full Name*</label>
-            <input
-              className="block w-full mt-1 mb-4 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black font-semibold pl-2"
-              type="text"
-              id="name"
-              value={values?.name}
-              name="name"
-              onChange={handleChange}
-              onBlur={onBlur}
-              placeholder="Your full name*"
-            />
-            <label>Email*</label>
-            <input
-              className="block w-full mt-1 mb-4 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black font-semibold pl-2"
-              type="email"
-              id="email"
-              value={values?.email}
-              name="email"
-              onChange={handleChange}
-              onBlur={onBlur}
-              placeholder="Your email address*"
-            />
-            <label>Subject*</label>
-            <input
-              className="block w-full mt-1 mb-4 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black font-semibold pl-2"
-              type="Subject"
-              placeholder="Your subject*"
-              id="subject"
-              value={values?.subject}
-              name="subject"
-              onChange={handleChange}
-              onBlur={onBlur}
-            />
-            <label>Message*</label>
-            <textarea
-              className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 resize-none mb-10 text-black font-medium"
-              value={values?.message}
-              name="message"
-              rows={4}
-              onChange={handleChange}
-              onBlur={onBlur}
-              placeholder="Write your message here...*"
-            ></textarea>
-            <div className="flex flex-col justify-center items-center w-full">
+            <div>
+              <Label htmlFor="name">Full Name</Label>
+              <input
+                className="w-full px-3 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                onBlur={onBlur}
+                placeholder="Your full name"
+              />
+            </div>
+            <div>
+              <Label htmlFor="email">Email</Label>
+              <input
+                className="w-full px-3 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={onBlur}
+                placeholder="Your email address"
+              />
+            </div>
+            <div>
+              <Label htmlFor="subject">Subject</Label>
+              <input
+                className="w-full px-3 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                name="subject"
+                value={values.subject}
+                onChange={handleChange}
+                onBlur={onBlur}
+                placeholder="Your subject"
+              />
+            </div>
+            <div>
+              <Label htmlFor="message">Message</Label>
+              <textarea
+                className="w-full px-3 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                name="message"
+                rows={5}
+                value={values.message}
+                onChange={handleChange}
+                onBlur={onBlur}
+                placeholder="Write your message here..."
+              ></textarea>
+            </div>
+            <div className="flex flex-col justify-center items-center w-full pt-4">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center"
                 type="button"
@@ -211,20 +178,21 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
-        <div className="mt-4 lg:flex lg:flex-row-reverse p-2">
-          <div className="text-sm lg:text-md leading-none text-white p-1 pb-3 -mt-3 text-center">
-            Don't Feel Like Filling Out Forms? No worries!
-            <br /> You can shoot me an email at
-            <a
-              href="mailto:your.email@gmail.com"
-              className="text-accent hover:underline text-blue-600 text-md lg:text-xl pt-3"
-            >
-              📮aviuitee@gmail.com
-            </a>
-          </div>
-          <div className="lg:flex-1 flex items-center justify-center lg:items-start lg:justify-start lg:text-3xl lg:-mt-6">
-            <IconsContact />
-          </div>
+      </div>
+
+      <div className="mt-4 lg:flex lg:flex-row-reverse p-2">
+        <div className="text-sm lg:text-md leading-none text-white p-1 pb-3 -mt-3 text-center">
+          Don't Feel Like Filling Out Forms? No worries!
+          <br /> You can shoot me an email at
+          <a
+            href="mailto:aviyadavchas@gmail.com"
+            className="text-accent hover:underline text-blue-600 text-md lg:text-xl pt-3"
+          >
+            📮aviyadavchas@gmail.com
+          </a>
+        </div>
+        <div className="lg:flex-1 flex items-center justify-center lg:items-start lg:justify-start lg:text-3xl lg:-mt-6">
+          <IconsContact />
         </div>
       </div>
     </section>

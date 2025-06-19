@@ -1,6 +1,5 @@
 "use client";
 import Project from "@/components/Project";
-import Work from "@/components/Work";
 import React from "react";
 import "../../components/animate.css";
 import { motion } from "framer-motion";
@@ -10,30 +9,68 @@ const page = () => {
   const projectData = [
     {
       index: 1,
-      title: "ITC-Store",
+      title: "Service Central (Mashreq Bank)",
       description:
-        "Developed responsive and optimized user interfaces using NextJs, ensuring seamless user experiences across various devices. Integrated GraphQL APIs in NextJs applications for efficient data fetching and manipulation, receiving positive feedback from clients on the improved frontend functionality and design. Additionally, Led and managed the BFF Development team in building scalable GraphQL APIs with Nest.js, overseeing service development from concept to delivery in each sprint.",
+        "Developed letter generation modules (Balance Confirmation, No-Liability, Reference Letters) for Mashreq’s customer portal. Automated workflows and improved UX, boosting customer interaction.",
+      role: "Frontend Developer",
+      technologies: "React, TypeScript, Tailwind CSS, Next.js, API Integration",
+      screenshots: ["/mashreq_cp_login.png", "/balanceCertificate_screen.png"],
+      demoLink: "https://www.mashreq.com/en/uae/about-us/",
+      githubLink: "",
+    },
+    {
+      index: 2,
+      title: "Digital Onboarding Platform (Mashreq Bank)",
+      description:
+        "Contributed to the design and development of a comprehensive onboarding system for business banking users. Built interfaces for modules like document upload, company info, transaction profiling, stakeholder data, FATCA/CRS details, case verification (risk matrix, screening, audit logs), and online banking setup with payment authorization matrix. Ensured data traceability and compliance through structured workflows and enhanced UI.",
+      role: "Frontend Developer",
+      technologies:
+        "React, TypeScript, Tailwind CSS, Redux, Formik, Yup, Next.js",
+      screenshots: [
+        "/mashreq_cp_login.png",
+        "/mashreq_home.png",
+        "/nitro_mashreq.png",
+      ],
+      demoLink: "https://www.mashreq.com/en/uae/about-us/",
+      githubLink: "",
+    },
+    {
+      index: 3,
+      title: "Admin Tools (Mashreq Bank)",
+      description:
+        "Developed internal productivity tools from scratch including a Postman-style cURL/bash API testing interface and a SQL Query Playground for debugging and testing queries within the app ecosystem.",
+      role: "Full-Stack Developer",
+      technologies: "React, TypeScript, Tailwind CSS, SQL, Next.js, Node.js",
+      screenshots: ["/mashreq_login.png", "/admin_mashreq.png"],
+      demoLink: "https://www.mashreq.com/en/uae/about-us/",
+      githubLink: "",
+    },
+    {
+      index: 4,
+      title: "ITC E-Store",
+      description:
+        "Built a mobile-responsive storefront UI using Next.js and GraphQL. Enhanced frontend performance and scalability by integrating a custom BFF layer with NestJS.",
       role: "Full-Stack Developer",
       technologies:
-        "React, Next.js,Tailwind CSS, Nest.js,Graphql API,TypeScript, Microservices, AWS, Docker, Jest",
+        "Next.js, GraphQL, Tailwind CSS, NestJS, TypeScript, AWS, Docker, Jest",
       screenshots: ["/itc1.png", "/itc2.png", "/itc3.png", "/itc4.png"],
       demoLink: "http://itcstore.in/",
       githubLink: "",
     },
     {
-      index: 2,
-      title: "XOS TRUCKS",
+      index: 5,
+      title: "XOS Navigation App",
       description:
-        "Developed a navigation application using ReactJS and ElectronJS tailored explicitly for the XOS platform to run in the Yocto environment. Integrated the Google Maps API to enable precise place searches and turn-by-turn navigation. Implemented additional features such as favorites and travel history functionality. Leveraged local storage to store relevant data within the application.",
+        "Developed a React + ElectronJS app optimized for Yocto environment. Integrated Google Maps API and local storage to support travel history and offline capabilities.",
       role: "Frontend Developer",
       technologies:
-        "React.JS, Chakra UI,TypeScript,Electron.js, Google Map APIs,",
+        "React.js, Chakra UI, TypeScript, Electron.js, Google Maps API",
       screenshots: ["/xos1.png", "/xos2.png"],
       demoLink: "https://www.xostrucks.com/",
       githubLink: "",
     },
     {
-      index: 3,
+      index: 6,
       title: "Commonwealth Bank Of Australia - CFS Wrap",
       description:
         "Responsible for enhancing the UI/UX of Commonwealth Bank of Australia's wrap customer's web application using ReactJS, Redux, CSS, and Flex properties.Streamlined application design resulting in improved functionality and an enhanced user experience.",
@@ -44,7 +81,7 @@ const page = () => {
       githubLink: "",
     },
     {
-      index: 4,
+      index: 7,
       title: "Commonwealth Bank Of Australia - CFS Avanteous",
       description:
         "Contributed to the enhancement of the UI/UX of Commonwealth Bank of Australia's Avanteos customer's web application using ReactJS, Redux, CSS, and Flex properties. Implemented changes to improve the application's overall design and usability.",
@@ -55,7 +92,7 @@ const page = () => {
       githubLink: "",
     },
     {
-      index: 5,
+      index: 8,
       title: "PROSHOP",
       description:
         "Full-Stack Ecommerce website Features: Login Page, Sign Up, Logout, Products Page, Checkout Page, User Authentication, Deletion and Updation of products, Total Price in Cart, The Payment Page, The Orders History Page (Real Time Database)",
@@ -73,7 +110,7 @@ const page = () => {
       githubLink: "https://github.com/yavinash-cloud",
     },
     {
-      index: 6,
+      index: 9,
       title: "Covid-19 Tracker",
       description:
         "A web application, where users can track covid19 updates.Features: Total number of cases, recoveries and deaths for each country in world .A map showing the data of cases, recoveries and deaths with proper geographical location of each country. ",
@@ -84,7 +121,7 @@ const page = () => {
       githubLink: "https://github.com/yavinash-cloud",
     },
     {
-      index: 7,
+      index: 10,
       title: "Google Clone",
       description:
         "A completely functional Google Search clone made using React.js, Material UI, CSS, and Firebase is a web application that allows users to search for information on the internet, similar to Google Search.",
@@ -95,7 +132,7 @@ const page = () => {
       githubLink: "https://github.com/yavinash-cloud",
     },
     {
-      index: 8,
+      index: 11,
       title: "Pig-Dice-Game",
       description:
         "This is a simple dice roll game made using HTML, CSS, JavaScript, and Bootstrap. It is a two-player game where players take turns rolling dice and trying to score the highest number. The first player to reach 100 points wins the game.This game is a great way to learn about the basics of web development, including HTML, CSS, JavaScript, and Bootstrap. It is also a fun and addictive game to play with friends.",
@@ -106,7 +143,7 @@ const page = () => {
       githubLink: "https://github.com/yavinash-cloud",
     },
     {
-      index: 8,
+      index: 12,
       title: "My Portfolio (Old)",
       description:
         "This portfolio website is a one-page website that showcases my skills and experience in web development. The website is built using HTML, CSS, and vanilla JS.The website features a responsive layout, a navigation bar, a section about me, a section about my skills and experience, and a section with links to my projects.I am most proud of the fact that this website is fully functional and that it is built using only HTML, CSS, and vanilla JS.",
@@ -117,6 +154,7 @@ const page = () => {
       githubLink: "https://github.com/yavinash-cloud",
     },
   ];
+
   return (
     <div className="relative z-10">
       <div className="container mx-auto py-8">

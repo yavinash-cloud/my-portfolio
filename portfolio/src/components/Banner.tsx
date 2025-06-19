@@ -14,6 +14,7 @@ import { fadeIn } from "../utils/variants";
 import WavingHand from "./Waving";
 import IconsContact from "./IconsContact";
 import "./animate.css";
+import VideoWithFallback from "./VideoWithFallback";
 
 const Banner = () => {
   return (
@@ -126,14 +127,7 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex sm:flex flex-1 max-w-[520px] lg:mx-w-[582px]"
           >
-            <Image
-              alt="Web developer working on laptop  3D Illustration"
-              // loading="lazy"
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-laptop-6343300-5242454.png?f=webp"
-              width={1000}
-              height={4000}
-              priority={true}
-            ></Image>
+            <VideoWithFallback />
           </motion.div>
         </div>
       </div>
